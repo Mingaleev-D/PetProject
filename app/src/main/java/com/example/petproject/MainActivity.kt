@@ -10,6 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+import com.example.petproject.ui.components.ProfileScreen
 import com.example.petproject.ui.theme.PetProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,18 +23,27 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colors.background
             ) {
-               Greeting(name = "Android")
+               ProfileScreen()
+               // Greeting(name = "Android")
             }
          }
       }
    }
 }
 
+//@Composable
+//fun Greeting(name: String, modifier: Modifier = Modifier) {
+//   Text(
+//       text = "Hello $name!",
+//       modifier = modifier
+//   )
+//}
+
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun MyApp() {
    Text(
-       text = "Hello $name!",
-       modifier = modifier
+       text = "Android Welcome Compose",
+       fontSize = 30.sp
    )
 }
 
@@ -40,6 +51,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
    PetProjectTheme {
-      Greeting("Android")
+      MyApp()
    }
 }
